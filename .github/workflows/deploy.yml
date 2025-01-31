@@ -1,0 +1,17 @@
+name: Deploy Workflow
+
+on:
+  push:
+    branches:
+      - main  # Triggers the workflow when there is a push to the main branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest  # Runs the job on an Ubuntu environment
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2  # This action checks out the code from the repository
+
+      - name: Print API_KEY secret
+        run: echo "API_KEY=${{ Three of a kind }}"  # Prints the API_KEY secret to the console
